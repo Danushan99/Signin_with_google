@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/state_manager.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:googlelogin/login_controler.dart';
@@ -34,8 +35,23 @@ class LoginPage extends StatelessWidget {
                   .image,
           radius: 80,
         ),
-        Text(controller.googleAccount.value?.displayName ?? ''),
-        Text(controller.googleAccount.value?.email ?? ''),
+        Text(
+          controller.googleAccount.value?.displayName ?? '',
+          style: Get.textTheme.headline4,
+        ),
+        Text(
+          controller.googleAccount.value?.email ?? '',
+          style: Get.textTheme.headline5,
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        ActionChip(
+            avatar: Icon(Icons.logout),
+            label: Text('Logout'),
+            onPressed: () {
+              controller.logout();
+            })
       ],
     );
   }
