@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
           backgroundImage:
               Image.network(controller.googleAccount.value?.photoUrl ?? '')
                   .image,
-          radius: 80,
+          radius: 70,
         ),
         Text(
           controller.googleAccount.value?.displayName ?? '',
@@ -44,10 +44,10 @@ class LoginPage extends StatelessWidget {
           style: Get.textTheme.headline5,
         ),
         SizedBox(
-          height: 20,
+          height: 100,
         ),
         ActionChip(
-            avatar: Icon(Icons.logout),
+            avatar: Icon(Icons.logout_rounded),
             label: Text('Logout'),
             onPressed: () {
               controller.logout();
@@ -62,6 +62,13 @@ class LoginPage extends StatelessWidget {
         controller.login();
       },
       label: Text('Sign in with Google'),
+      icon: Image.asset(
+        'asset/g-logo.png',
+        height: 32,
+        width: 32,
+      ),
+      backgroundColor: Colors.white,
+      foregroundColor: Colors.black,
     );
   }
 }
