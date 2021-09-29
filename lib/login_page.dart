@@ -44,7 +44,7 @@ class LoginPage extends StatelessWidget {
           style: Get.textTheme.headline5,
         ),
         SizedBox(
-          height: 100,
+          height: 80,
         ),
         ActionChip(
             avatar: Icon(Icons.logout_rounded),
