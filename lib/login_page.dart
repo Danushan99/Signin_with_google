@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/button_list.dart';
-import 'package:flutter_signin_button/button_view.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/state_manager.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 import 'package:googlelogin/login_controler.dart';
 
 class LoginPage extends StatelessWidget {
   final controller = Get.put(LoginController());
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +57,7 @@ class LoginPage extends StatelessWidget {
       onPressed: () {
         controller.login();
       },
-      label: Text('Sign in with Google'),
+      label: Text('Sign In With Google'),
       icon: Image.asset(
         'asset/g-logo.png',
         height: 32,
