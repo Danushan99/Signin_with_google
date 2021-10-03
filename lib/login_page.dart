@@ -39,7 +39,7 @@ class LoginPage extends StatelessWidget {
           controller.googleAccount.value?.email ?? '',
           style: Get.textTheme.headline5,
         ),
-        SizedBox(
+        const SizedBox(
           height: 100,
         ),
         ActionChip(
